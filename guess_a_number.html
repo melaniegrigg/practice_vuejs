@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Guess A Number.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="guess_a_number.js" defer></script>
+  </head>
+  <body>
+    <h1>Hello there!</h1>
+    <div id="app">
+      <p>{{ message }}</p>
+
+      <p>enter your guess here:<input type="text" v-model="userGuess"></p>
+      <button v-on:click="compareNumber()">Submit Guess</button>
+
+      <p>{{ userGuess }} is </p>
+    </div>
+  </body>
+</html>
