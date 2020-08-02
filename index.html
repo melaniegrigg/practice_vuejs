@@ -9,11 +9,23 @@
   <body>
     <h1>Hello from HTML!</h1>
     <div id="app">
-      {{ message }}
-      {{ name }}
-      {{ display }}
+      <p>{{ message }}</p>
+      <p>{{ name }}</p>
+      <p>{{ fruits }}</p>
+
       <button v-on:click="changeMessage()">Click Me PLEASE</button>
       <p>enter a name:<input type="text" v-model="name"></p>
+
+      <button v-on:click="toggleInfo()"> Hidey Button</button>
+      <p v-if="showInfo">Welcome to the hidey hole</p>
+
+      <p><input type="text" v-model="newFruit"></p>
+      <p><button v-on:click="addFruit()">Add a fruit(s)</button></p>
+
+
+      <div v-for = "fruit in fruits">
+        hey, {{fruit}} are mediocre
+      </div>
     </div>
   </body>
 </html>
